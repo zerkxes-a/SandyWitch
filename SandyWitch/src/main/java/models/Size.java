@@ -9,4 +9,7 @@ public class Size {
     public void setSize(String size) {
         this.size = size;
     }
+    public static Size valueOf(String string) {
+        return null;
+    }
 }
