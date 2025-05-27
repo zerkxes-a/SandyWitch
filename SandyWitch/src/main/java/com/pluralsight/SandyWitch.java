@@ -39,6 +39,7 @@ public class SandyWitch {
             //TODO IMPLEMENT ALL MAKE WHAT AN ORDER IS AND ITEMS BITCH
             switch (option){
                 case "1":
+                    //TODO ADD SANDWICH METHOD(BOTH CUSTOM AND SIGNATURE OPTIONS)
                     break;
                 case "2":
                     break;
