@@ -2,9 +2,9 @@ package models;
 
 public class Drink {
     private String flavor;
-    private Size size;
+    private String size;
 
-    public Drink(String flavor, Size size) {
+    public Drink(String flavor, String size) {
         this.flavor = flavor;
         this.size = size;
     }

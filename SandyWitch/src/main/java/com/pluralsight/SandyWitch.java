@@ -2,15 +2,17 @@ package com.pluralsight;
 
 import java.util.Scanner;
 
+
+
 public class SandyWitch {
     static Scanner input = new Scanner(System.in);
 
     public static void main(String[] args) {
         while (true){
             System.out.println("*-Welcome to The Sandy Witch Cafe-*");
-            System.out.print("Please choose an option: ");
             System.out.println("1) New Order");
             System.out.println("0) Exit");
+            System.out.print("Please choose an option: ");
             String choice = input.nextLine();
             switch (choice) {
                 case "1":
@@ -30,7 +32,7 @@ public class SandyWitch {
             System.out.println("---* Order Menu *---");
             System.out.println("1) Add Sandwich");
             System.out.println("2) Add Drink");
-            System.out.println("3) Add Chips");
+            System.out.println("3) Add Side");
             System.out.println("4) Checkout");
             System.out.println("0) Cancel Order");
             System.out.print("Please select your choice here: ");
@@ -42,8 +44,10 @@ public class SandyWitch {
                     //TODO ADD SANDWICH METHOD(BOTH CUSTOM AND SIGNATURE OPTIONS)
                     break;
                 case "2":
+                    Menu.selectDrink();
                     break;
                 case "3":
+                    Menu.selectSide(); //TODO STILL IMPLEMET
                     break;
                 case "4":
                     break;

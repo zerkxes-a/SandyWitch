@@ -3,10 +3,6 @@ package models;
 public class Size {
     public String size;
 
-    public Size(String size) {
-        this.size = size;
-    }
-
     public String getSize() {
         return size;
     }
