@@ -1,8 +1,6 @@
 package com.pluralsight;
 
-import models.BreadType;
-import models.Sandwich;
-import models.SandwichSize;
+import models.*;
 
 import java.util.Scanner;
 
@@ -30,13 +28,27 @@ public class SandwichBuilder {
         Sandwich customChoice = new Sandwich(bread, sandwichSize,toasted);
 
         for (String meat : Menu.getMeatOptions())
-            if (Helpers.getYesNo(input, "Add " + meat + "?")){
-                boolean extra = Helpers.getYesNo(input, "Extra " + meat + "?");
+            if (Helpers.getYesNo(input, "Add " + meat + " ?")){
+                boolean extra = Helpers.getYesNo(input, "Extra " + meat + " ?");
+                customChoice.addTopping(new Topping(meat, new ToppingType(meat), extra));
+            }
+        for (String cheese: Menu.getCheeseOptions())
+            if (Helpers.getYesNo(input, "Add " + cheese + " ?")){
+                boolean extra = Helpers.getYesNo(input, "Extra " + cheese + " ?");
+                customChoice.addTopping(new Topping(cheese, new ToppingType(cheese), extra));
             }
 
-
-
-        return null;
+        for (String topping: Menu.getRegularOptions())
+            if (Helpers.getYesNo(input, "Add " + topping + " ?")){
+                boolean extra = Helpers.getYesNo(input, "Extra " + topping + " ?");
+                customChoice.addTopping(new Topping(topping, new ToppingType(topping), false));
+            }
+        for (String sauce: Menu.getSauceOptions())
+            if (Helpers.getYesNo(input, "Add " + sauce + " ?")){
+                boolean extra = Helpers.getYesNo(input, "Extra " + sauce + " ?");
+                customChoice.addTopping(new Topping(sauce, new ToppingType(sauce), false));
+            }
+        return customChoice;
     }
 
     private static Sandwich chooseSignature() {
