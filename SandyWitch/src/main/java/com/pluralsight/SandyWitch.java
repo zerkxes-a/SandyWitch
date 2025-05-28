@@ -3,7 +3,6 @@ package com.pluralsight;
 import java.util.Scanner;
 
 
-
 public class SandyWitch {
     static Scanner input = new Scanner(System.in);
 
