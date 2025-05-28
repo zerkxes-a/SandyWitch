@@ -12,4 +12,5 @@ public class Size {
     public static Size valueOf(String string) {
         return null;
     }
+
 }

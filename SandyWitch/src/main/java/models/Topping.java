@@ -3,7 +3,7 @@ package models;
 public class Topping {
     private String name;
     private ToppingType type;
-    private boolean isExtra;
+    private static boolean isExtra;
 
     public Topping(String name, ToppingType type, boolean isExtra) {
         this.name = name;
@@ -27,7 +27,7 @@ public class Topping {
         this.type = type;
     }
 
-    public boolean isExtra() {
+    public static boolean isExtra() {
         return isExtra;
     }
 

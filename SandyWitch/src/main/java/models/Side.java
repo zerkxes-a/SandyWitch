@@ -16,7 +16,6 @@ public class Side {
         } else if (type.equals("house chips")) {
             price = 2.50;
         }
-
         return price;
     }
     @Override

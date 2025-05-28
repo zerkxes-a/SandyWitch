@@ -1,8 +1,6 @@
 package com.pluralsight;
 
 import models.*;
-
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -24,12 +22,6 @@ public class Order{
         for (Side side : sides) System.out.println(sides);
         System.out.println("Total: $" + String.format("%.2f", getTotal()));
     }
-    //TODO IMPLEMENT GET PRICE FOR SANDWICH,
-    public double getTotal(){
-        return  sandwiches.stream().mapToDouble(Sandwich::getPrice).sum() +
-                drinks.stream().mapToDouble(Drink::getPrice).sum() +
-                sides.stream().mapToDouble(Side::getPrice).sum();
-    }
 
     public List<Sandwich> getSandwiches(){
         return sandwiches;
@@ -39,6 +31,12 @@ public class Order{
     }
     public List<Side> getSides(){
         return sides;
+    }
+    //TODO IMPLEMENT GET PRICE FOR SANDWICH
+    public double getTotal(){
+        return  sandwiches.stream().mapToDouble(Sandwich::getPrice).sum() +
+                drinks.stream().mapToDouble(Drink::getPrice).sum() +
+                sides.stream().mapToDouble(Side::getPrice).sum();
     }
 
 }
