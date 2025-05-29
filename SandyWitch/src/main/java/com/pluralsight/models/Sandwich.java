@@ -16,6 +16,7 @@ public class Sandwich extends Item{
         this.bread = bread;
     }
 
+
     @Override
     public double getPrice() {
         double toppingsTotal = toppings.stream().mapToDouble(topping -> topping.getPrice(this.size) ).sum();
@@ -38,15 +39,15 @@ public class Sandwich extends Item{
         return "";
     }
 
-    /*public String toString(){
+    public String toString(){
         StringBuilder stringBuilder = new StringBuilder();
         stringBuilder.append(size).append(" ").append(bread).append(" sandwich\n");
         if (toasted) stringBuilder.append("Toasted\n");
-        for (Topping topping: toppings.toppings)
-            stringBuilder.append(" - ").append(topping.getName()).append(Topping.isExtra() ? " (extra)" : " \n");
+        for (Topping toppings: toppings)
+            stringBuilder.append(" - ").append(toppings.getName()).append(Topping.isExtra() ? " (extra)" : " \n");
         stringBuilder.append("Subtotal: $").append(String.format("%.2f", getPrice())).append("\n");
         return stringBuilder.toString();
-    }*/
+    }
 
     public String getDescription(){
         return "Sandwich: " + size + " on " + bread;

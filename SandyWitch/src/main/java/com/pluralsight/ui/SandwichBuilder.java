@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.Scanner;
 
 public class SandwichBuilder {
-    static Scanner input = Helpers.getScanner();
+    public static Scanner input = Helpers.getScanner();
 
     public static void build(){
 
@@ -27,7 +27,7 @@ public class SandwichBuilder {
 
     }
 
-    private static Sandwich buildCustom() {
+    public static Sandwich buildCustom() {
         String name = Helpers.getString(input, "Please name your Sandwich: ").toLowerCase().trim();
         String bread = Helpers.getString(input, "Choose your Bread (Po Boy, Texas Toast, Sourdough, Brioche Bun: ").toLowerCase().trim();
         String size = Helpers.getString(input, "Choose Size: Small (4 inch - $5.50) | Medium (8 inch - $7.00) | Large (12 inch - $9.00): ").toLowerCase().trim();
@@ -139,7 +139,7 @@ public class SandwichBuilder {
                 if (userSelection.equalsIgnoreCase("X"))break;
             }
         }if(sauceSelection != null) toppings.add(new Topping("sauce", sauceSelection));
-        
+
         return new Sandwich(name, toppings, toasted,size, bread);
     }
 

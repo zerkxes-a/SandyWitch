@@ -13,10 +13,8 @@ public class Order{
 
     public void printSummary(){
         System.out.println("---* Order Summary *---");
-
+        System.out.println();
     }
-
-
 
     //TODO IMPLEMENT GET PRICE FOR SANDWICH
     public double getTotal(){

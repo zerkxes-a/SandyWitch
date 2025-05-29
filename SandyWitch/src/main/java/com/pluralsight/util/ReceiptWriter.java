@@ -1,16 +1,13 @@
 package com.pluralsight.util;
 
 import com.pluralsight.Order;
-import com.pluralsight.models.Drink;
-import com.pluralsight.models.Sandwich;
-import com.pluralsight.models.Side;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
-public class RecepitWriter {
+public class ReceiptWriter {
 
    public static void saveOrder(Order order) {
        String timestamp = LocalDateTime.now().format(
@@ -21,7 +18,7 @@ public class RecepitWriter {
           writer.write("---* RECEIPT *---\n");
           writer.write("Transaction Time: " + timestamp + "\n");
 
-            //TODO CHANGE TO GET ITEMS????
+           /* //TODO CHANGE TO GET ITEMS????
            for (Sandwich sandwiches : order.getSandwiches()){
                writer.write(sandwiches.toString() + " ");
            }
@@ -30,7 +27,7 @@ public class RecepitWriter {
            }
            for (Side sides : order.getSides()) {
                writer.write(sides.toString() + " ");
-           }
+           }*/
 
            writer.write("Total: $" + String.format("%.2f", order.getTotal()));
        } catch (Exception e) {

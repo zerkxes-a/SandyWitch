@@ -3,7 +3,7 @@ package com.pluralsight.ui;
 import com.pluralsight.util.Helpers;
 import com.pluralsight.util.Menu;
 import com.pluralsight.Order;
-import com.pluralsight.util.RecepitWriter;
+import com.pluralsight.util.ReceiptWriter;
 
 import java.util.Scanner;
 
@@ -13,7 +13,7 @@ public class UserInterface {
     public class SandyWitch {
 
 
-        public static void main(String[] args) {
+        public static void sandyWitch(){
             while (true) {
                 System.out.println("*-Welcome to The Sandy Witch Cafe-*");
                 System.out.println("1) New Order");
@@ -45,7 +45,7 @@ public class UserInterface {
                 System.out.print("Please select your choice here: ");
                 String option = input.nextLine();
 
-                //TODO IMPLEMENT ALL MAKE WHAT AN ORDER IS AND ITEMS
+
                 switch (option) {
                     case "1":
                         Menu.addSandwich();
@@ -54,10 +54,10 @@ public class UserInterface {
                         Menu.selectDrink();
                         break;
                     case "3":
-                        Menu.selectSide(); //TODO STILL IMPLEMET
+                        Menu.selectSide();
                         break;
                     case "4":
-                        RecepitWriter.saveOrder(order);
+                        ReceiptWriter.saveOrder(order);
                         break;
                     case "0":
                         System.out.println("Order Cancelled");

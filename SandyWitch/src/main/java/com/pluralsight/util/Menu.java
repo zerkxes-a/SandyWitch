@@ -12,32 +12,26 @@ public class Menu {
     //scanner for whole menu
     static Scanner input = new Scanner(System.in);
 
-    private static List<String> breadOptions = List.of(
-        "Po Boy", "Texas Toast", "Sourdough", "Brioche Bun"
-    );
-    private static List<String> meatOptions = List.of(
+    private static final List<String> meatOptions = List.of(
       "Shrimp", "Soft Shell Crab", "Crab Cake", "Kielbasa", "Beef", "Chicken", "Tofu", "Portabella"
     );
-    private static List<String> cheeseOptions = List.of(
+    private static final List<String> cheeseOptions = List.of(
       "American", "Cheddar", "Mozzerella", "Bleu", "Pepperjack", "Provolone"
     );
-    private static List<String> regularOptions = List.of(
+    private static final List<String> regularOptions = List.of(
       "Lettuce", "Onion", "Tomato", "Jalapeno", "Cucumber", "Pickles", "* - Magic Sand - *" , "Regular Sand"
     );
-    private static List<String> sauceOptions = List.of(
+    private static final List<String> sauceOptions = List.of(
       "Mayo", "Tartar", "Remoulade", "Ketchup", "Mustard"
     );
-    private static List<String> sideTypes = List.of(
+    private static final List<String> sideTypes = List.of(
             "Spam Musubi", "Calamari", "House Chips"
     );
-    private static List<String> drinkFlavors = List.of(
+    private static final List<String> drinkFlavors = List.of(
             "Coke", "Orange Fanta", "Ginger Beer", "Love Potion", "Drop of Luck"
     );
 
     //SANDWICH OPTION DISPLAY METHODS
-    public static List<String> getBreadOptions(){
-        return breadOptions;
-    }
 
     public static List<String> getMeatOptions(){
         return meatOptions;
@@ -54,9 +48,6 @@ public class Menu {
     public static List<String> getSauceOptions() {
         return sauceOptions;
     }
-
-
-
 
     public static Side selectSide(){
         System.out.println("Side Options: ");
