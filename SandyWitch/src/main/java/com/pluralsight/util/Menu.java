@@ -1,5 +1,6 @@
 package com.pluralsight.util;
 
+import com.pluralsight.Order;
 import com.pluralsight.models.Drink;
 import com.pluralsight.models.Side;
 import com.pluralsight.ui.SandwichBuilder;
@@ -58,7 +59,7 @@ public class Menu {
     }
 
     public static void addSandwich() {
-        SandwichBuilder.build();
+        Order.addItem(SandwichBuilder.build());
     }
 
     public static Drink selectDrink() {

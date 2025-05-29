@@ -20,14 +20,10 @@ public class Side extends Item{
         return price;
     }
 
-    @Override
-    public String add() {
-        return name;
-    }
 
 
     @Override
     public String toString() {
-        return ("Side selection: " + name + " : " + String.format("$.2d", getPrice()));
+        return ("Side selection: " + name + " : " + String.format("$%.2f", getPrice()));
     }
 }

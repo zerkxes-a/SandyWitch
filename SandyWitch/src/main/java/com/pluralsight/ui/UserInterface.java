@@ -1,8 +1,8 @@
 package com.pluralsight.ui;
 
+import com.pluralsight.Order;
 import com.pluralsight.util.Helpers;
 import com.pluralsight.util.Menu;
-import com.pluralsight.Order;
 import com.pluralsight.util.ReceiptWriter;
 
 import java.util.Scanner;
@@ -22,7 +22,7 @@ public class UserInterface {
                 String choice = input.nextLine();
                 switch (choice) {
                     case "1":
-                        handleNewOrder(); //TODO IMPLEMENT HANDLE NEW ORDER
+                        handleNewOrder();
                         break;
                     case "0":
                         System.out.println("Thank you for visiting! Have a magical day!");
@@ -34,8 +34,8 @@ public class UserInterface {
         }
 
         public static void handleNewOrder() {
-            Order order = new Order();
             while (true) {
+                Order.printSummary();
                 System.out.println("---* Order Menu *---");
                 System.out.println("1) Add Sandwich");
                 System.out.println("2) Add Drink");
@@ -51,16 +51,17 @@ public class UserInterface {
                         Menu.addSandwich();
                         break;
                     case "2":
-                        Menu.selectDrink();
+                        Order.addItem(Menu.selectDrink());
                         break;
                     case "3":
-                        Menu.selectSide();
+                        Order.addItem(Menu.selectSide());
                         break;
                     case "4":
-                        ReceiptWriter.saveOrder(order);
+                        ReceiptWriter.saveOrder();
                         break;
                     case "0":
-                        System.out.println("Order Cancelled");
+                        Order.clearOrder();
+                        System.out.println("---* Order Cancelled *---");
                         break;
                 }
             }

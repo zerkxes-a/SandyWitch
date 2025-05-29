@@ -1,0 +1,14 @@
+---* RECEIPT *---
+Transaction Time: 20250529-170446
+Drink selection: large coke : $.2d
+Sandwich: big boy large on po boy toasted: 16.75
+ Soft Shell Crab - 3.0
+Soft Shell Crab - 3.0
+Mozzerella - 2.25
+Lettuce - 0.0
+Mayo - 0.0
+
+Side selection: calamari : $.2d
+
+ *--- Total Price ---* 
+$26.75

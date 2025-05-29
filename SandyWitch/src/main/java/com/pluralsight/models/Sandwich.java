@@ -1,6 +1,7 @@
 package com.pluralsight.models;
 
 import java.util.ArrayList;
+import java.util.stream.Collectors;
 
 public class Sandwich extends Item{
     protected String bread;
@@ -35,22 +36,15 @@ public class Sandwich extends Item{
     }
 
     @Override
-    public String add() {
-        return "";
-    }
-
-    public String toString(){
-        StringBuilder stringBuilder = new StringBuilder();
-        stringBuilder.append(size).append(" ").append(bread).append(" sandwich\n");
-        if (toasted) stringBuilder.append("Toasted\n");
-        for (Topping toppings: toppings)
-            stringBuilder.append(" - ").append(toppings.getName()).append(Topping.isExtra() ? " (extra)" : " \n");
-        stringBuilder.append("Subtotal: $").append(String.format("%.2f", getPrice())).append("\n");
-        return stringBuilder.toString();
-    }
+    public String toString() {
+                //get the array list of toppings and go through each item
+        return getDescription() + "\n " + toppings.stream()
+                //mapping each topping to string
+                .map(topping -> topping.toString(size) + "\n")
+                //join all toppings into one string
+                .collect(Collectors.joining());}
 
     public String getDescription(){
-        return "Sandwich: " + size + " on " + bread;
-
+        return "Sandwich for: "+ name + " \n " + size + " on " + bread + (toasted ? " toasted" : "") + ": " + getPrice();
     }
 }

@@ -69,4 +69,7 @@ public class Topping{
         }
         return 0;
     }
+    public String toString(String size) {
+        return name + " - " + "$" + getPrice(size);
+    }
 }
