@@ -1,10 +1,13 @@
-package com.pluralsight;
+package com.pluralsight.util;
 
 import java.util.Scanner;
 
 public class Helpers {
-    Scanner input = new Scanner(System.in);
-
+    private Helpers(){}
+    static Scanner input = new Scanner(System.in);
+    public static Scanner getScanner(){
+        return input;
+    }
     public static String getString(Scanner input, String prompt){
         System.out.print(prompt);
         return input.nextLine().trim();

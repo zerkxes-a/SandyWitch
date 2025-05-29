@@ -1,6 +1,8 @@
-package com.pluralsight;
+package com.pluralsight.util;
 
-import models.*;
+import com.pluralsight.models.Drink;
+import com.pluralsight.models.Side;
+import com.pluralsight.ui.SandwichBuilder;
 
 import java.util.List;
 import java.util.Scanner;

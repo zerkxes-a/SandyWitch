@@ -1,15 +1,17 @@
-package interfaces;
+package com.pluralsight.ui;
 
-import com.pluralsight.Menu;
+import com.pluralsight.util.Helpers;
+import com.pluralsight.util.Menu;
 import com.pluralsight.Order;
-import com.pluralsight.RecepitWriter;
+import com.pluralsight.util.RecepitWriter;
 
 import java.util.Scanner;
 
 
 public class UserInterface {
+    static Scanner input = Helpers.getScanner();
     public class SandyWitch {
-        static Scanner input = new Scanner(System.in);
+
 
         public static void main(String[] args) {
             while (true) {
@@ -43,7 +45,7 @@ public class UserInterface {
                 System.out.print("Please select your choice here: ");
                 String option = input.nextLine();
 
-                //TODO IMPLEMENT ALL MAKE WHAT AN ORDER IS AND ITEMS BITCH
+                //TODO IMPLEMENT ALL MAKE WHAT AN ORDER IS AND ITEMS
                 switch (option) {
                     case "1":
                         Menu.addSandwich();

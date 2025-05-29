@@ -1,8 +1,9 @@
-package com.pluralsight;
+package com.pluralsight.util;
 
-import models.Drink;
-import models.Sandwich;
-import models.Side;
+import com.pluralsight.Order;
+import com.pluralsight.models.Drink;
+import com.pluralsight.models.Sandwich;
+import com.pluralsight.models.Side;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;
@@ -20,7 +21,7 @@ public class RecepitWriter {
           writer.write("---* RECEIPT *---\n");
           writer.write("Transaction Time: " + timestamp + "\n");
 
-
+            //TODO CHANGE TO GET ITEMS????
            for (Sandwich sandwiches : order.getSandwiches()){
                writer.write(sandwiches.toString() + " ");
            }

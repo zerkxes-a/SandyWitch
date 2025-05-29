@@ -1,6 +1,6 @@
 package com.pluralsight;
 
-import models.Item;
+import com.pluralsight.models.Item;
 
 import java.util.ArrayList;
 
@@ -10,6 +10,7 @@ public class Order{
     public void addItem(Item item){
         items.add(item);
     }
+
     public void printSummary(){
         System.out.println("---* Order Summary *---");
 

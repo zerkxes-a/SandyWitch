@@ -1,4 +1,4 @@
-package models;
+package com.pluralsight.models;
 
 public abstract class Item {
     protected String name;
