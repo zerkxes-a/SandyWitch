@@ -1,14 +1,14 @@
 package models;
 
-public class Drink {
-    private String flavor;
+public class Drink extends Item {
     private String size;
 
-    public Drink(String flavor, String size) {
-        this.flavor = flavor;
+    public Drink(String name, String size) {
+        super(name);
         this.size = size;
     }
 
+    @Override
     public double getPrice() {
         double price = 0.0;
         if (size.equals("small")) {
@@ -23,7 +23,13 @@ public class Drink {
     }
 
     @Override
+    public String add() {
+        return name;
+    }
+
+
+    @Override
     public String toString() {
-        return ("Drink selection: " + size + " " + flavor + " : " + String.format("$.2d", getPrice()));
+        return ("Drink selection: " + size + " " + name + " : " + String.format("$.2d", getPrice()));
     }
 }

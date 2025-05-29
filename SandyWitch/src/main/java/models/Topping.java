@@ -1,14 +1,24 @@
 package models;
 
-public class Topping {
-    private String name;
-    private ToppingType type;
-    private static boolean isExtra;
+public class Topping{
+    public String type;
+    public String name;
 
-    public Topping(String name, ToppingType type, boolean isExtra) {
-        this.name = name;
+    public Topping(String type, String name) {
         this.type = type;
-        this.isExtra = isExtra;
+        this.name = name;
+    }
+
+    public static boolean isExtra() {
+        return true;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
     }
 
     public String getName() {
@@ -18,20 +28,45 @@ public class Topping {
     public void setName(String name) {
         this.name = name;
     }
+    public double getPrice(String size){
+        switch (size){
+            case "small"->{
+                switch(type){
+                    case "meat" -> {return 1.00;}
+                    case "cheese" -> {return 0.75;}
+                    case "extra meat" -> {return 0.50;}
+                    case "extra cheese" ->{return 0.30;}
+                    default -> {
+                        return 0;
+                    }
 
-    public ToppingType getType() {
-        return type;
-    }
+                }
+            }
+            case "medium"->{
+                switch(type){
+                    case "meat" -> {return 2.00;}
+                    case "cheese" -> {return 1.50;}
+                    case "extra meat" -> {return 1.00;}
+                    case "extra cheese" ->{return 0.60;}
+                    default -> {
+                        return 0;
+                    }
 
-    public void setType(ToppingType type) {
-        this.type = type;
-    }
+                }
+            }
+            case "large"->{
+                switch(type){
+                    case "meat" -> {return 3.00;}
+                    case "cheese" -> {return 2.25;}
+                    case "extra meat" -> {return 1.50;}
+                    case "extra cheese" ->{return 0.90;}
+                    default -> {
+                        return 0;
+                    }
 
-    public static boolean isExtra() {
-        return isExtra;
-    }
-
-    public void setExtra(boolean extra) {
-        isExtra = extra;
+                }
+            }
+        }
+        return 0;
     }
 }

@@ -1,25 +1,33 @@
 package models;
 
-public class Side {
-    private String type;
+public class Side extends Item{
 
-    public Side(String type) {
-        this.type = type;
+
+    public Side(String name) {
+        super(name);
+
     }
 
     public double getPrice() {
         double price = 0.0;
-        if (type.equals("spam musubi")) {
+        if (name.equals("spam musubi")) {
             price = 3.50;
-        } else if (type.equals("calamari")) {
+        } else if (name.equals("calamari")) {
             price = 7.00;
-        } else if (type.equals("house chips")) {
+        } else if (name.equals("house chips")) {
             price = 2.50;
         }
         return price;
     }
+
+    @Override
+    public String add() {
+        return name;
+    }
+
+
     @Override
     public String toString() {
-        return ("Side selection: " + type + " : " + String.format("$.2d", getPrice()));
+        return ("Side selection: " + name + " : " + String.format("$.2d", getPrice()));
     }
 }

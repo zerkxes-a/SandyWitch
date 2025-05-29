@@ -14,7 +14,7 @@ public class Menu {
         "Po Boy", "Texas Toast", "Sourdough", "Brioche Bun"
     );
     private static List<String> meatOptions = List.of(
-      "Shrimp", "Soft Shell Crab", "Crab Cake", "Kielbasa", "Beef", "Chicken"
+      "Shrimp", "Soft Shell Crab", "Crab Cake", "Kielbasa", "Beef", "Chicken", "Tofu", "Portabella"
     );
     private static List<String> cheeseOptions = List.of(
       "American", "Cheddar", "Mozzerella", "Bleu", "Pepperjack", "Provolone"
@@ -25,11 +25,11 @@ public class Menu {
     private static List<String> sauceOptions = List.of(
       "Mayo", "Tartar", "Remoulade", "Ketchup", "Mustard"
     );
-    private static List<String> drinkFlavors = List.of(
-            "Coke", "Orange Fanta", "Ginger Beer", "Love Potion", "Drop of Luck"
-    );
     private static List<String> sideTypes = List.of(
             "Spam Musubi", "Calamari", "House Chips"
+    );
+    private static List<String> drinkFlavors = List.of(
+            "Coke", "Orange Fanta", "Ginger Beer", "Love Potion", "Drop of Luck"
     );
 
     //SANDWICH OPTION DISPLAY METHODS
@@ -52,18 +52,9 @@ public class Menu {
     public static List<String> getSauceOptions() {
         return sauceOptions;
     }
-    public static Drink selectDrink(){
 
-        System.out.println("Drink Options: ");
-        System.out.println(drinkFlavors);
-        System.out.print("Please Enter your Selection Here: ");
-        String flavor = input.nextLine().toLowerCase().trim();
-        System.out.print("Size Options: Small, Medium, Large");
-        String size = input.nextLine().toLowerCase().trim();
-        System.out.println();
 
-        return new Drink(flavor, size);
-    }
+
 
     public static Side selectSide(){
         System.out.println("Side Options: ");
@@ -72,4 +63,19 @@ public class Menu {
         String type = input.nextLine().toLowerCase().trim();
         return new Side(type);
     }
+
+    public static void addSandwich() {
+        SandwichBuilder.build();
+    }
+
+    public static Drink selectDrink() {
+        System.out.println("Drink Options: ");
+        System.out.println(drinkFlavors);
+        System.out.print("Please enter your Selection Here: ");
+        String name = input.nextLine().toLowerCase().trim();
+        System.out.print("Size Options: Small, Medium, Large: ");
+        String size = input.nextLine().toLowerCase().trim();
+        return new Drink(name, size);
+    }
+
 }
