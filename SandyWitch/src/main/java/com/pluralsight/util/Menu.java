@@ -14,19 +14,19 @@ public class Menu {
     static Scanner input = new Scanner(System.in);
 
     private static final List<String> meatOptions = List.of(
-      "Shrimp", "Soft Shell Crab", "Crab Cake", "Kielbasa", "Beef", "Chicken", "Tofu", "Portabella"
+      "Shrimp", "Soft Shell Crab", "Crab Cake", "Kielbasa", "Fried Oysters", "Cod"
     );
     private static final List<String> cheeseOptions = List.of(
-      "American", "Cheddar", "Mozzerella", "Bleu", "Pepperjack", "Provolone"
+      "American", "Cheddar", "Mozzarella", "Bleu", "Pepper jack", "Provolone"
     );
     private static final List<String> regularOptions = List.of(
-      "Lettuce", "Onion", "Tomato", "Jalapeno", "Cucumber", "Pickles", "* - Magic Sand - *" , "Regular Sand"
+      "Lettuce", "Onion", "Tomato", "Jalapeno", "Pickles", "* - Magic Sand - *" , "Regular Sand"
     );
     private static final List<String> sauceOptions = List.of(
       "Mayo", "Tartar", "Remoulade", "Ketchup", "Mustard"
     );
     private static final List<String> sideTypes = List.of(
-            "Spam Musubi", "Calamari", "House Chips"
+            "Spam Musubi", "Calamari", "House Chips", "Fries"
     );
     private static final List<String> drinkFlavors = List.of(
             "Coke", "Orange Fanta", "Ginger Beer", "Love Potion", "Drop of Luck"

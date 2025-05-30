@@ -15,10 +15,10 @@ public class SandwichBuilder {
     public static Sandwich build(){
 
         System.out.println("*-Sandwich Options-*");
-        System.out.println("1) Signature Sandwich");
+        System.out.println("1) Signature Sandwich(WIP)");
         System.out.println("2) Custom Sandwich");
-        String choice = SandwichBuilder.input.nextLine();
         System.out.print("Please enter your selection here: ");
+        String choice = SandwichBuilder.input.nextLine();
 
         if (choice.equals("1"))
             return null;
@@ -27,9 +27,9 @@ public class SandwichBuilder {
 
     public static Sandwich buildCustom() {
         String name = Helpers.getString(input, "Please enter your Name: ").toLowerCase().trim();
-        String bread = Helpers.getString(input, "Choose your Bread (Po Boy, Texas Toast, Sourdough, Brioche Bun: ").toLowerCase().trim();
+        String bread = Helpers.getString(input, "Choose your Bread (Po Boy, Hoagie, Sourdough, Brioche Bun, White : ").toLowerCase().trim();
         String size = Helpers.getString(input, "Choose Size: Small (4 inch - $5.50) | Medium (8 inch - $7.00) | Large (12 inch - $9.00): ").toLowerCase().trim();
-        boolean toasted = Helpers.getYesNo(input, "Would you like this Toasted? (yes/no): ");
+        boolean toasted = Helpers.getYesNo(input, "Would you like this Toasted?   ");
         ArrayList<Topping> toppings = new ArrayList<>();
 
         //Loop to add main meat to sandwich
@@ -142,10 +142,5 @@ public class SandwichBuilder {
         }if(sauceSelection != null) toppings.add(new Topping("sauce", sauceSelection));
 
         return new Sandwich(name, toppings, toasted,size, bread);
-    }
-
-    //tODO BUILD CHOOSE SIGNATURE
-    private static Sandwich chooseSignature() {
-        return null;
     }
 }

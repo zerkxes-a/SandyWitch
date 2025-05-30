@@ -16,7 +16,10 @@ public class Side extends Item{
             price = 7.00;
         } else if (name.equals("house chips")) {
             price = 2.50;
+        } else if (name.equals("fries")){
+            price = 5.00;
         }
+
         return price;
     }
 

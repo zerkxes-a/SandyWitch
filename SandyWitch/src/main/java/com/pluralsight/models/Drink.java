@@ -24,6 +24,6 @@ public class Drink extends Item {
 
     @Override
     public String toString() {
-        return ("Drink selection: " + size + " " + name + " : " + String.format("$%.2f", getPrice()));
+        return ("Drink selection: " +size + " " + name + " : " + String.format("$%.2f", getPrice()));
     }
 }

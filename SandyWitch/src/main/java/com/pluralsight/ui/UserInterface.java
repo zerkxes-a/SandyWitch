@@ -26,6 +26,7 @@ public class UserInterface {
                         break;
                     case "0":
                         System.out.println("Thank you for visiting! Have a magical day!");
+                        System.exit(0);
                         return;
                     default:
                         System.out.println("Invalid choice, please try again");
@@ -62,6 +63,7 @@ public class UserInterface {
                     case "0":
                         Order.clearOrder();
                         System.out.println("---* Order Cancelled *---");
+                        sandyWitch();
                         break;
                 }
             }

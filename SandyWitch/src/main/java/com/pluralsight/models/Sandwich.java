@@ -45,6 +45,6 @@ public class Sandwich extends Item{
                 .collect(Collectors.joining());}
 
     public String getDescription(){
-        return "Sandwich for: "+ name + " \n " + size + " on " + bread + (toasted ? " toasted" : "") + ": " + getPrice();
+        return "Sandwich for " + name + " \n " + size + " " + bread + (toasted ? " toasted" : "") + ": $" + getPrice();
     }
 }
